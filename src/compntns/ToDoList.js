@@ -19,11 +19,11 @@ const enterEvent = (e) =>
      }
  }
     return (
-        <div style={{textAlign: 'center'}}>
+        <div style={{textAlign: 'center' }}>
 
         <input ref={inputRef} type="text" value={inputValue} onKeyPress={enterEvent} onChange={(e) => setInputValue(e.target.value)}/>
         <input type="button" value='ADD' onClick={sandTask}/>
-        <div>
+        <div style={{textAlign: 'left' ,maxWidth:'200px' , margin:'auto' }}>
             {props.list && props.list.map((task, index) => <li key= {index} onClick={()=>props.addTask(task)}>{task}</li>) }
         </div>
         </div>
